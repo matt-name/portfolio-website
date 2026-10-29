@@ -1,6 +1,4 @@
 (() => {
-  document.documentElement.classList.add('js');
-
   const nav = document.querySelector('.nav');
   const toggle = document.querySelector('.nav__toggle');
   const links = document.getElementById('nav-links');
@@ -59,6 +57,18 @@
       }
       setTimeout(() => { label.textContent = 'Copy email'; }, 2000);
     });
+  });
+
+  // Chart tooltips
+  const tip = document.querySelector('.tip');
+  document.querySelectorAll('[data-tip]').forEach((row) => {
+    row.addEventListener('mousemove', (e) => {
+      tip.textContent = row.dataset.tip;
+      tip.style.left = e.clientX + 'px';
+      tip.style.top = e.clientY + 'px';
+      tip.hidden = false;
+    });
+    row.addEventListener('mouseleave', () => { tip.hidden = true; });
   });
 
   // Footer year
