@@ -59,18 +59,6 @@
     });
   });
 
-  // Chart tooltips
-  const tip = document.querySelector('.tip');
-  document.querySelectorAll('[data-tip]').forEach((row) => {
-    row.addEventListener('mousemove', (e) => {
-      tip.textContent = row.dataset.tip;
-      tip.style.left = e.clientX + 'px';
-      tip.style.top = e.clientY + 'px';
-      tip.hidden = false;
-    });
-    row.addEventListener('mouseleave', () => { tip.hidden = true; });
-  });
-
   // Footer year
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
