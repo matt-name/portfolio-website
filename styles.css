@@ -225,7 +225,13 @@ strong { font-weight: 600; }
 .contact__title { font-size: clamp(48px, 7vw, 84px); font-weight: 300; letter-spacing: -.02em; line-height: 1.05; }
 .contact__lede { color: var(--contrast-muted); max-width: 32em; margin: 24px auto 0; font-size: 18px; }
 .contact__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 40px; }
-.contact__loc { margin-top: 32px; font-size: 14px; color: var(--contrast-muted); }
+.contact__email { margin-top: 28px; font-size: 16px; color: var(--contrast-ink); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 12px; }
+.contact__copy {
+  background: none; border: 0; padding: 4px 0; cursor: pointer;
+  font: 500 14px/1 var(--sans); color: var(--accent); text-decoration: underline; text-underline-offset: 3px;
+}
+.contact__copy:hover { color: var(--contrast-ink); }
+.contact__loc { margin-top: 20px; font-size: 14px; color: var(--contrast-muted); }
 
 /* Footer */
 .footer { background: var(--contrast-bg); color: var(--contrast-muted); border-top: 1px solid rgba(243, 237, 226, .1); font-size: 14px; }
